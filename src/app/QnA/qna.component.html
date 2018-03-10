@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 style="text-align: center">Answers List</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Answer</th>
+            <th>Confidence</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor='let aData of data; let i = index'>
+            <td>{{aData.rank}}</td>
+            <td>{{aData.answer}}</td>
+            <td>{{aData.confidence}}</td>
+        </tr>
+        <tr  *ngIf='error'>
+            <td  colspan="3">{{error}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
